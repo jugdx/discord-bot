@@ -7,6 +7,6 @@ declare module 'diskord-bot' {
         // properties
         public owners: string | string[];
         // functions
-        public isOwner(userID: string): boolean 
+        public isOwner(userID: string): boolean;
     }
 }
