@@ -2,7 +2,7 @@ import { Client, ClientOptions, Intents } from 'discord.js';
 
 export class DiscordBot extends Client {
 
-    public owners: string | string[]
+    public owners: string | string[];
 
     public constructor(owners: string | string[], options?: ClientOptions) {
         super(options ?? {
