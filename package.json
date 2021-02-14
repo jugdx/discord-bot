@@ -1,15 +1,16 @@
 {
-  "name": "discord.bot",
+  "name": "diskord-bot",
   "version": "1.0.0",
   "description": "A discord bot framework for Discord.js",
-  "main": "index.js",
-  "types": "lib",
+  "main": "dist/index.js",
+  "types": "dist/**/*.d.ts",
   "scripts": {
-    "clean": "rimraf lib",
-    "clean-build": "rimraf lib && tsc",
+    "clean": "rimraf dist",
+    "clean-build": "rimraf dist && tsc",
     "build": "tsc",
     "build-trace": "tsc --traceResolution",
-    "watch:build": "tsc --watch"
+    "watch:build": "tsc --watch",
+    "publish": "npm publish --access=public"
   },
   "repository": {
     "type": "git",
