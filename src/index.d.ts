@@ -6,10 +6,10 @@ declare module 'diskord-bot' {
     export interface DiskordBotOptions {
         owners?: DiskordBotOwner;
     }
-    
+
     export class DiskordBot extends Client {
+        public constructor(options: DiskordBotOptions, clientOptions?: ClientOptions);
         public readonly owners: DiskordBotOwner;
-        public constructor(options: DiskordBotOptions = {}, clientOptions?: ClientOptions);
         public isOwner(userID: string): boolean;
     }
 }

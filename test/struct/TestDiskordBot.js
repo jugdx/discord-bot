@@ -6,7 +6,9 @@ const owner = "host@1234";
 
 class TestDiskordBot extends DiskordBot {
     constructor() {
-        super(owner);
+        super({
+            owners: owner
+        });
     }
 }
 
