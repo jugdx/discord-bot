@@ -2,11 +2,14 @@ import { Client } from 'discord.js';
 
 declare module 'diskord-bot' {
 
-    export class DiscordBot extends Client {
-        public constructor(owners: string | string[], options?: ClientOptions)
-        // properties
-        public owners: string | string[];
-        // functions
+    export type DiskordBotOwner = string | string[];
+    export interface DiskordBotOptions {
+        owners?: DiskordBotOwner;
+    }
+    
+    export class DiskordBot extends Client {
+        public readonly owners: DiskordBotOwner;
+        public constructor(options: DiskordBotOptions = {}, clientOptions?: ClientOptions);
         public isOwner(userID: string): boolean;
     }
 }

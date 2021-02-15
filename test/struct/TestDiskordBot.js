@@ -1,12 +1,13 @@
 const { Test } = require('tslint');
 const { DiscordBot } = require('../../src/index');
+const { DiskordBot } = require('../../src/structs/DiskordBot');
 
 const owner = "host@1234";
 
-class TestDiscordBot extends DiscordBot {
+class TestDiskordBot extends DiskordBot {
     constructor() {
         super(owner);
     }
 }
 
-module.exports = TestDiscordBot;
+module.exports = TestDiskordBot;
